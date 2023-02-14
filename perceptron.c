@@ -19,15 +19,27 @@ float perceptron(float *entradas, float *pesos, size_t tamanho) {
 
     return somatorio;
 }
-
+/*
+this function ativate is used for the linear decisions
+ex: this order is fraud or not? 
+*/
 uint8_t activation_function_linear(float result) {
     return result >= 1;
 }
 
+/*
+this activation function is used to non-linear decisions.
+she return a number between 0 and 1.
+the problem of this function is dont return a negative number.
+*/
 float activation_function_sigmoid(float result) {
     return 1 / (1+ exp((1/10), result) );
 }
 
+/*
+this activation function is equal function above, but, 
+this function can return number from -1 to 1;
+*/
 float activation_function_tanh(float result) {
     return 2 / activation_function_sigmoid(result) - 1;
 }
