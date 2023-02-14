@@ -44,6 +44,14 @@ float activation_function_tanh(float result) {
     return 2 / activation_function_sigmoid(result) - 1;
 }
 
+/*
+in this funcion if result are  smaller than 0, return 0,
+else return result
+*/
+float activation_function_relu(float result) {
+    return (result < 0) ? 0 : result;
+}
+
 int main() {
     float entradas[] = {2, 100, 4, 2}; 
     float pesos[] = {100, 2, 4, 30}; 
