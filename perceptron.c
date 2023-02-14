@@ -9,7 +9,16 @@ float exp(float base, uint32_t exponent) {
     return result;
 }
 
-float perceptron(float *entradas, float *pesos, size_t tamanho) {
+float sum(float *in, size_t size) {
+    float result = 0;
+    for(uin8_t i = 0; i < size; i++) {
+        result += *(in + i);
+    }
+
+    return result;
+}
+
+float perceptron(float *entradas, float *pesos, size_t tamanho, int32_t bias) {
     float somatorio = 0;
     for(int8_t i = 0;  i < tamanho; i ++) {
         float entrada_atual = *(entradas + i);
@@ -17,7 +26,7 @@ float perceptron(float *entradas, float *pesos, size_t tamanho) {
         somatorio += entrada_atual * pesos_atual;
     }
 
-    return somatorio;
+    return somatorio + bias;
 }
 /*
 this function ativate is used for the linear decisions
