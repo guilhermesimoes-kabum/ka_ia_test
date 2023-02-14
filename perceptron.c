@@ -45,11 +45,10 @@ float activation_function_tanh(float result) {
 }
 
 /*
-in this funcion if result are  smaller than 0, return 0,
-else return result
+this activation function 
 */
-float activation_function_relu(float result) {
-    return (result < 0) ? 0 : result;
+float activation_function_softmax(float result, float *results_all, size_t size) {
+    return result / sum(results_all, size);
 }
 
 int main() {
