@@ -2,6 +2,7 @@
 #include <stdint>
 
 #include "helper.h"
+#include "backpropagation.h"
 
 float to_positive(float n) {
     return n < 0 ? (n * -1) : n;
