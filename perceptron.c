@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include <stdint.h>
+#include "helper.h"
 
 float exp(float base, uint32_t exponent) {
     float result = 1;
@@ -54,7 +55,9 @@ float activation_function_tanh(float result) {
 }
 
 /*
-this activation function 
+this activation function return the result between interval.
+So, when classifier between 1 or 0, yes or no ... is not enough.
+this function returns jow much the result belongs to each class
 */
 float activation_function_softmax(float result, float *results_all, size_t size) {
     return result / sum(results_all, size);
