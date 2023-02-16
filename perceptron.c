@@ -2,23 +2,6 @@
 #include <stdint.h>
 #include "helper.h"
 
-float exp(float base, uint32_t exponent) {
-    float result = 1;
-    for(uint32_t index = 0; index < exponent; index ++)
-        result *= result;
-
-    return result;
-}
-
-float sum(float *in, size_t size) {
-    float result = 0;
-    for(uin8_t i = 0; i < size; i++) {
-        result += *(in + i);
-    }
-
-    return result;
-}
-
 float perceptron(float *entradas, float *pesos, size_t tamanho, int32_t bias) {
     float somatorio = 0;
     for(int8_t i = 0;  i < tamanho; i ++) {
