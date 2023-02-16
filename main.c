@@ -26,6 +26,26 @@ float mean_squared_error(
     return begin * exp(usigned_sub, 2);
 }
 
+void static sgd(
+    float **data, 
+    float* expected, 
+    uint32_t epochs, 
+    uint32_t mini_batch_size
+) {
+    size_t n = SIZE(data);
+
+    for(uint32_t i = 0; i < epochs; i++) {
+        
+    }
+}
+
+void update_weights(uint32_t epochs, float *weights) {
+
+    for(uint32_t i = 0; i < epochs; i++) {
+
+    }
+}
+
 int main() {
 
 }
