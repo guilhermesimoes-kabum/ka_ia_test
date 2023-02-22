@@ -1,9 +1,9 @@
-#include <stdio.h>
-#include <stdint>
+#include<stdio.h>
+#include<stdint>
 
-#include "helper.h"
-#include "backpropagation.h"
-#include "perceptron.h"
+#include"helper.h"
+#include"backpropagation.h"
+#include"perceptron.h"
 
 float to_positive(float n) {
     return n < 0 ? (n * -1) : n;

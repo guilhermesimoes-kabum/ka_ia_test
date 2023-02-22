@@ -1,6 +1,6 @@
-#include <stdio.h>
-#include <stdint.h>
-#include "helper.h"
+#include<stdio.h>
+#include<stdint.h>
+#include"helper.h"
 
 float sum(float *in, size_t size) {
     float result = 0;

@@ -1,7 +1,7 @@
 #include<stdio.h>
-#include <stdint.h>
+#include<stdint.h>
 
-#include "helper.h"
+#include"helper.h"
 
 float derivate(float out) {
     return out * (1 - out);
