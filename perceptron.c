@@ -1,6 +1,7 @@
 #include<stdio.h>
-#include <stdint.h>
-#include "helper.h"
+#include<stdint.h>
+#include"helper.h"
+#include"perceptron.h"
 
 float perceptron(float *entradas, float *pesos, size_t tamanho, int32_t bias) {
     float somatorio = 0;
@@ -45,12 +46,3 @@ this function returns jow much the result belongs to each class
 float activation_function_softmax(float result, float *results_all, size_t size) {
     return result / sum(results_all, size);
 }
-
-//int main() {
-//    float entradas[] = {2, 100, 4, 2}; 
-//    float pesos[] = {100, 2, 4, 30}; 
-//    size_t tamanho = 4;
-//    float somatorio = perceptron(entradas, pesos, tamanho);
-//
-//    printf("%i\n", somatorio);
-//}
